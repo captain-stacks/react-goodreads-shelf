@@ -16,4 +16,5 @@ export type Book = {
   rating?: number;
   dateRead?: Date;
   dateAdded?: Date;
+  shelf?: string;
 };

@@ -2,7 +2,7 @@
   "include": ["src/index.ts", "src/globals.d.ts"],
   "compilerOptions": {
     "jsx": "react-jsx",
-    "target": "es5",
+    "target": "es6",
     "module": "commonjs",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,

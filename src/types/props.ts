@@ -34,7 +34,7 @@ type SortKey =
   | "purchase_location"
   | "condition";
 
-type GroupBy = "year";
+type GroupBy = "year" | "shelf";
 
 type HideDetails = { [Property in keyof Book]?: boolean };
 
