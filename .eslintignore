@@ -1,4 +1,1 @@
-build/
-dist/
-stories/
-jest.setup.js
+*

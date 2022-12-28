@@ -1,10 +1,10 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
-import GoodreadsBookshelf from '..'
+import GoodreadsBookshelf from './components/GoodreadsBookshelf.tsx'
 
 let id = window.location.hash.substring(1)
 
-createRoot(document.getElementById('home')!).render(
+createRoot(document.getElementById('home')).render(
   <div>
     {id && <GoodreadsBookshelf
         userId={id}
@@ -13,13 +13,13 @@ createRoot(document.getElementById('home')!).render(
         groupBy='shelf'
         sort='rating'
         displayOptions = {{
-            hideBackgroundImages: true,
-			hideDetails: {
-				subtitle: true,
-				author: true,
-				title: false
-			}
-		}}
+          hideBackgroundImages: true,
+          hideDetails: {
+            subtitle: true,
+            author: true,
+            title: false
+          }
+        }}
     />}
   </div>
 )
