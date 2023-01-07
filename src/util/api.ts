@@ -126,6 +126,7 @@ const getAllShelves = async (props: Props): Promise<string[]> => {
   const proxyUrl = `https://cors.kylekarpack.workers.dev/corsproxy/?apiurl=${encodeURIComponent(url)}`
   const text = await fetch(proxyUrl).then(res => res.text())
   const goodreadsDocument = new DOMParser().parseFromString(text, "text/html")
-  return [...goodreadsDocument.querySelectorAll('.userShelf')].map(e =>
-      e.querySelector('.actionLinkLite')!.getAttribute('href')!.match(/shelf=(.+)/)![1])
+  const shelves = [...goodreadsDocument.querySelectorAll('.userShelf')].map(e =>
+    e.querySelector('.actionLinkLite')!.getAttribute('href')!.match(/shelf=(.+)/)![1])
+  return props.excludeShelves ? shelves.filter(s => !props.excludeShelves?.includes(s)) : shelves
 };

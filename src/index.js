@@ -12,7 +12,8 @@ createRoot(document.getElementById('home')).render(
         limit={500}
         groupBy='shelf'
         sort='rating'
-        displayOptions = {{
+        excludeShelves={[]}
+        displayOptions={{
           hideBackgroundImages: true,
           hideDetails: {
             subtitle: true,

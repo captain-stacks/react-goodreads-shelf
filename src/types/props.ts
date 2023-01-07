@@ -65,4 +65,5 @@ export type Props = {
   filter?: (book: Book) => boolean;
   /** Group by option */
   groupBy?: GroupBy;
+  excludeShelves?: string[];
 };
